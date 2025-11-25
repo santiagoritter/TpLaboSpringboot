@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPaw - Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="fotos/huella.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="headerfijo">
+        <div class="avisoarriba">
+            <p>Envios gratis a partir de $45.000 </p>
+        </div>
+
+        <div class="encabezado">
+            <div class="logo">
+                <a href="index.html"><img src="fotos/logo.png" alt="PawPaw"></a>
+            </div>
+            
+            <div class="barrabusqueda">
+                <nav class="colorbarrabusqueda navbar">
+                    <div class="container-fluid p-0">
+                        <form class="d-flex w-100" role="search">
+                            <input class="me-2 tamaniobarrabusqueda" type="search" placeholder="¿Que busca tu mascota hoy?" aria-label="Search"/>
+                            <button class="btn btnlupa" type="submit">
+                                <div class="lupabsqueda">
+                                    <img src="fotos/lupa.png" alt="">
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="hamburgesa">
+                <div class="dropdown">
+                    <button class="menudesplegable btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="fotos/menu.png" alt="">
+                    </button>
+                    <ul class="dropdown-menu menudespelgablecontenido dropdown-menu-end">
+                        <li><a class="dropdown-item" href=" ">Perros</a></li>
+                        <li><a class="dropdown-item" href=" ">Gatos</a></li>
+                        <li><a class="dropdown-item" href=" ">Veterinaria</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href=" ">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="espacioheader"></div>
+
+    <section class="seccion-perfil mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-3 mb-4">
+                    <div class="sidebar-perfil">
+                        <div class="info-corta-user text-center mb-4">
+                            <div class="foto-perfil-conteiner">
+                                <img src="fotos/perro2.jpeg" alt="Foto Perfil">
+                            </div>
+                            <h5 class="mt-2 fw-bold">Juan Perez</h5>
+                            <p class="text-muted">juan.perez@email.com</p>
+                        </div>
+                        <div class="menu-opciones">
+                            <button class="item-sidebar active" onclick="verSeccion('datos', this)">
+                                <i class="fa-solid fa-user"></i> Mis Datos
+                            </button>
+                            <button class="item-sidebar" onclick="verSeccion('mascotas', this)">
+                                <i class="fa-solid fa-paw"></i> Mis Mascotas
+                            </button>
+                            <button class="item-sidebar" onclick="verSeccion('compras', this)">
+                                <i class="fa-solid fa-bag-shopping"></i> Mis Compras
+                            </button>
+                            <button class="item-sidebar" onclick="verSeccion('invitar', this)">
+                                <i class="fa-solid fa-envelope"></i> Invitar Amigo
+                            </button>
+                            <button class="item-sidebar text-danger" onclick="alert('Cerraste sesión')">
+                                <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    
+                    <div id="sec-datos" class="contenido-tab">
+                        <div class="card-panel-usuario">
+                            <h4 class="mb-4">Información Personal</h4>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" value="Juan" >
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" value="Perez" >
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" value="juan.perez@email.com" disabled>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Teléfono</label>
+                                        <input type="text" class="form-control" value="11 5555-4444" >
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <label class="form-label">Dirección de Envío</label>
+                                        <input type="text" class="form-control" value="Av. Siempreviva 742, Springfield" >
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary botonazul mt-3" style="width: auto; padding: 10px 30px;">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="sec-mascotas" class="contenido-tab d-none">
+                        <div class="card-panel-usuario">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h4 class="mb-0">Mis Mascotas</h4>
+                                <button class="btn btn-sm btn-warning fw-bold">+ Agregar</button>
+                            </div>
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="card-mascota-perfil">
+                                        <div class="foto-mascota">
+                                            <img src="fotos/perro1.webp" alt="">
+                                        </div>
+                                        <div class="info-mascota">
+                                            <h5>Firulais</h5>
+                                            <p>Perro - Golden Retriever</p>
+                                            <span class="badge bg-secondary">5 Años</span>
+                                        </div>
+                                        <div class="acciones-mascota d-flex gap-2">
+                                            <button class="btn btn-sm btn-info text-white" onclick="verHistorial(1)" style="margin-right: 5px;">
+                                                <i class="fa-solid fa-book-medical"></i> Historial
+                                            </button>
+                                            <button class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card-mascota-perfil">
+                                        <div class="foto-mascota">
+                                            <img src="fotos/imagengatocirculo.jpeg" alt="">
+                                        </div>
+                                        <div class="info-mascota">
+                                            <h5>Michi</h5>
+                                            <p>Gato - Mestizo</p>
+                                            <span class="badge bg-secondary">2 Años</span>
+                                        </div>
+                                        <div class="acciones-mascota d-flex gap-2">
+                                            <button class="btn btn-sm btn-info text-white" onclick="verHistorial(2)" style="margin-right: 5px;">
+                                                <i class="fa-solid fa-book-medical"></i> Historial
+                                            </button>
+                                            <button class="btn-icon"><i class="fa-solid fa-pen"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sec-compras" class="contenido-tab d-none">
+                        <div class="card-panel-usuario">
+                            <h4 class="mb-4">Historial de Compras</h4>
+                            <div class="table-responsive">
+                                <table class="table tabla-compras">
+                                    <thead>
+                                        <tr>
+                                            <th>  Orden</th>
+                                            <th>Fecha</th>
+                                            <th>Total</th>
+                                            <th>Estado</th>
+                                            <th>Ver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> 4092</td>
+                                            <td>22/10/2023</td>
+                                            <td>$ 90.500</td>
+                                            <td><span class="badge bg-success">Entregado</span></td>
+                                            <td><a href=" " class="link-azul">Detalle</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td> 3015</td>
+                                            <td>10/09/2023</td>
+                                            <td>$ 15.200</td>
+                                            <td><span class="badge bg-success">Entregado</span></td>
+                                            <td><a href=" " class="link-azul">Detalle</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2999</td>
+                                            <td>05/08/2023</td>
+                                            <td>$ 45.000</td>
+                                            <td><span class="badge bg-success">Entregado</span></td>
+                                            <td><a href=" " class="link-azul">Detalle</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sec-invitar" class="contenido-tab d-none">
+                        <div class="card-panel-usuario">
+                            <h4 class="mb-4">Invitar a alguien</h4>
+                            <p class="text-muted">Mandar invitacion para adoptar.</p>
+                            <form onsubmit="mandarInvitacion(event)">
+                                <div class="mb-3">
+                                    <label>ID Tuyo (Invitante)</label>
+                                    <input type="number" id="idInvitante" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label>Email del amigo</label>
+                                    <input type="email" id="emailInvitado" class="form-control" placeholder="mail@ejemplo.com" required>
+                                </div>
+                                <button type="submit" class="btn btn-warning fw-bold">Generar Codigo</button>
+                            </form>
+                            <div id="divResultadoInv" class="mt-4 p-3 bg-light d-none border border-warning">
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="piepagina">
+        <div class="container info-footer pt-5">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>ACERCA DE PAWPAW</h6>
+                    <ul class="lista-footer">
+                        <li><a href=" ">Quiénes somos</a></li>
+                        <li><a href=" ">Nuestras sucursales</a></li>
+                        <li><a href=" ">Trabajá con nosotros</a></li>
+                        <li><a href=" ">Blog de mascotas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>AYUDA</h6>
+                    <ul class="lista-footer">
+                        <li><a href=" ">Tiempos de envío</a></li>
+                        <li><a href=" ">Políticas de devolución</a></li>
+                        <li><a href=" ">Preguntas frecuentes</a></li>
+                        <li><a href=" ">Botón de arrepentimiento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>SERVICIOS</h6>
+                    <ul class="lista-footer">
+                        <li><a href=" ">Clínica Veterinaria</a></li>
+                        <li><a href=" ">Peluquería Canina</a></li>
+                        <li><a href=" ">Adopciones</a></li>
+                        <li><a href=" ">Farmacia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>CONTACTANOS</h6>
+                    <p class="contactotexto"><i class="fa-solid fa-phone"></i> 0800-555-PAWPAW</p>
+                    <p class="contactotexto"><i class="fa-solid fa-envelope"></i> vet@pawpaw.com</p>
+                    <div class="redes-sociales mt-3">
+                        <a href=" "><i class="fa-brands fa-instagram"></i></a>
+                        <a href=" "><i class="fa-brands fa-facebook"></i></a>
+                        <a href=" "><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>© 2024 PawPaw. Todos los derechos reservados. Hecho con  para las mascotas.</p>
+        </div>
+    </footer>
+
+    <script>
+        function verSeccion(nombre, btn) {
+            document.querySelectorAll('.contenido-tab').forEach(div => div.classList.add('d-none'));
+            document.getElementById('sec-' + nombre).classList.remove('d-none');
+
+            document.querySelectorAll('.item-sidebar').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        async function mandarInvitacion(e) {
+            e.preventDefault();
+            const idInv = document.getElementById('idInvitante').value
+            const mail = document.getElementById('emailInvitado').value
+
+            try {
+                const resp = await fetch(`http://localhost:8080/api/invitaciones?idInvitante=${idInv}&email=${mail}`, {
+                    method: 'POST'
+                })
+                const info = await resp.json() 
+
+                const div = document.getElementById('divResultadoInv')
+                div.classList.remove('d-none')
+                div.innerHTML = `
+                    <h5 class="text-success">Listo!</h5>
+                    <p>Pasale este codigo: <strong>${info.codigo}</strong></p>
+                    <small>Vence el: ${info.fechaVencimiento}</small>
+                `
+            } catch (err) {
+                alert("No se pudo crear la invitacion")
+            }
+        }
+
+        async function verHistorial(id) {
+            try {
+                const r = await fetch(`http://localhost:8080/api/mascotas/${id}/historial`)
+                const d = await r.json()
+                
+                let texto = `HISTORIAL MASCOTA ${id}\n\n`
+                
+                texto += "--- VACUNAS ---\n"
+                if(d.vacunas && d.vacunas.length > 0){
+                    d.vacunas.forEach(v => texto += `- ${v.tipo} (Vence: ${v.vencimiento})\n`)
+                } else {
+                    texto += "Nada registrado.\n"
+                }
+
+                texto += "\n--- TURNOS ---\n"
+                if(d.turnos && d.turnos.length > 0){
+                    d.turnos.forEach(t => texto += `- ${t.fecha}: ${t.descripcion}\n`)
+                } else {
+                    texto += "Sin turnos.\n"
+                }
+
+                alert(texto)
+
+            } catch (error) {
+                alert("Error al buscar historial o no existe la mascota");
+            }
+        }
+    </script>
+</body>
+</html>

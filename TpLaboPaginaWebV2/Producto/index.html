@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPaw - Detalle de Producto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="fotos/huella.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="headerfijo">
+        <div class="avisoarriba">
+            <p>Envios gratis a partir de $45.000 </p>
+        </div>
+
+        <div class="encabezado">
+            <div class="logo">
+                <a href="index.html"><img src="fotos/logo.png" alt="PawPaw"></a>
+            </div>
+            
+            <div class="barrabusqueda">
+                <nav class="colorbarrabusqueda navbar">
+                    <div class="container-fluid p-0">
+                        <form class="d-flex w-100" role="search">
+                            <input class="me-2 tamaniobarrabusqueda" type="search" placeholder="¿Que busca tu mascota hoy?" aria-label="Search"/>
+                            <button class="btn btnlupa" type="submit">
+                                <div class="lupabsqueda">
+                                    <img src="fotos/lupa.png" alt="">
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="hamburgesa">
+                <div class="dropdown">
+                    <button class="menudesplegable btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="fotos/menu.png" alt="">
+                    </button>
+                    <ul class="dropdown-menu menudespelgablecontenido dropdown-menu-end">
+                        <li><a class="dropdown-item" href="">Perros</a></li>
+                        <li><a class="dropdown-item" href="">Gatos</a></li>
+                        <li><a class="dropdown-item" href="">Veterinaria</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="">Ayuda</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="espacioheader"></div>
+       
+    <section class="detalle-producto-container mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-1 d-none d-md-flex flex-column gap-2 columna-miniaturas">
+                    <img src="fotos/imagenComidaPerro.png" class="img-thumbnail miniatura active" onclick="cambiarImagen(this)" alt="">
+                    <img src="fotos/imagenComidaPerro.png" class="img-thumbnail miniatura" onclick="cambiarImagen(this)" alt="">
+                    <img src="fotos/imagenComidaPerro.png" class="img-thumbnail miniatura" onclick="cambiarImagen(this)" alt="">
+                </div>
+
+                <div class="col-md-5 mb-4 text-center">
+                    <img id="imagenPrincipal" src="fotos/imagenComidaPerro.png" class="img-fluid imagen-grande-producto" alt="Producto Principal">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row g-3">
+                        
+                        <div class="col-md-7">
+                            <div class="caja-gris-info">
+                                <span class="marca-prod">Excellent</span>
+                                <h1 class="titulo-prod">Alimento Excellent Perro Adulto Mediano y Grande 20Kg</h1>
+                                <h2 class="precio-prod">$ 76.850</h2>
+                                <p class="precio-kilo text-muted">($ 3.842,50 x kg)</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="caja-gris-compra">
+                                <label class="fw-bold mb-2">Cantidad</label>
+                                <div class="contadorcantidad mb-3 w-100 bg-white">
+                                    <button class="btnoperacion" onclick="restar(this)">-</button>
+                                    <span class="numerocantidad">1</span>
+                                    <button class="btnoperacion" onclick="sumar(this)">+</button>
+                                </div>
+                                <button class="btn btn-primary botonazul w-100 btn-comprar-grande">COMPRAR</button>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="caja-gris-envios">
+                                <h6 class="mb-3">Opciones de envío:</h6>
+                                <div class="opcion-envio">
+                                    <div class="circulo-check"></div>
+                                    <div>
+                                        <p class="mb-0 fw-bold">Envio a Domicilio</p>
+                                        <small class="text-muted">Envío gratis >$45.000 en CABA y zonas de GBA.</small>
+                                    </div>
+                                </div>
+                                <div class="opcion-envio mt-2">
+                                    <div class="circulo-check"></div>
+                                    <div>
+                                        <p class="mb-0 fw-bold">Envio Flash</p>
+                                        <small class="text-muted">Recibilo hoy (CABA y GBA) comprando antes de las 13hs.</small>
+                                    </div>
+                                </div>
+                                <div class="opcion-envio mt-2">
+                                    <div class="circulo-check"></div>
+                                    <div>
+                                        <p class="mb-0 fw-bold">Retiro en Sucursal</p>
+                                        <small class="text-muted">Retiralo gratis por tu sucursal más cercana.</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="caja-descripcion">
+                        <h3>Descripción</h3>
+                        <p class="mt-3 text-muted">
+                            La exclusiva combinación de ingredientes seleccionados le confiere a las fórmulas Excellent® la propiedad de generar cambios significativos en la calidad de vida de los perros y gatos, a través de una nutrición de vanguardia con beneficios fácilmente comprobables. PROTEÍNAS DE ALTA DIGESTIBILIDAD. Aportan los aminoácidos esenciales para el mantenimiento de músculos fuertes y sanos. PREBIÓTICOS. Ayudan a la absorción de nutrientes y a mantener un equilibrio de la flora intestinal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="row mt-5">
+    <div class="col-12">
+        <h4 class="mb-3"> Mascotas que eligen este producto (Top Visitadas)</h4>
+        <div id="listaClientesFelices" class="d-flex gap-3" style="overflow-x: auto; padding-bottom: 10px;">
+            <p class="text-muted">Cargando recomendaciones...</p>
+        </div>
+    </div>
+</div>
+
+    <footer class="piepagina">
+        <div class="container info-footer pt-5">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>ACERCA DE PAWPAW</h6>
+                    <ul class="lista-footer">
+                        <li><a href="">Quiénes somos</a></li>
+                        <li><a href="">Nuestras sucursales</a></li>
+                        <li><a href="">Trabajá con nosotros</a></li>
+                        <li><a href="">Blog de mascotas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>AYUDA</h6>
+                    <ul class="lista-footer">
+                        <li><a href="">Tiempos de envío</a></li>
+                        <li><a href="">Políticas de devolución</a></li>
+                        <li><a href="">Preguntas frecuentes</a></li>
+                        <li><a href="">Botón de arrepentimiento</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>SERVICIOS</h6>
+                    <ul class="lista-footer">
+                        <li><a href="">Clínica Veterinaria</a></li>
+                        <li><a href="">Peluquería Canina</a></li>
+                        <li><a href="">Adopciones</a></li>
+                        <li><a href="">Farmacia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <h6>CONTACTANOS</h6>
+                    <p class="contactotexto"><i class="fa-solid fa-phone"></i> 0800-555-PAWPAW</p>
+                    <p class="contactotexto"><i class="fa-solid fa-envelope"></i> vet@pawpaw.com</p>
+                    <div class="redes-sociales mt-3">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-bar">
+            <p>© 2024 PawPaw. Todos los derechos reservados. Hecho con  para las mascotas.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        function sumar(elemento) {
+            let spanNumero = elemento.parentElement.querySelector('.numerocantidad');
+            let valorActual = parseInt(spanNumero.innerText);
+            spanNumero.innerText = valorActual + 1;
+        }
+
+        function restar(elemento) {
+             let spanNumero = elemento.parentElement.querySelector('.numerocantidad');
+             let valorActual = parseInt(spanNumero.innerText);
+             if (valorActual > 1) {
+                spanNumero.innerText = valorActual - 1;
+             }
+        }
+
+
+        function cambiarImagen(element) {
+            var mainImg = document.getElementById('imagenPrincipal');
+            mainImg.src = element.src;
+            
+            var minis = document.querySelectorAll('.miniatura');
+            minis.forEach(m => m.classList.remove('active'));
+            
+            element.classList.add('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+    cargarClientesFelices();
+});
+
+async function cargarClientesFelices() {
+    try {
+
+        const response = await fetch('http://localhost:8080/api/mascotas/ranking-visitas');
+        const mascotas = await response.json();
+
+        const contenedor = document.getElementById('listaClientesFelices');
+        contenedor.innerHTML = "";
+
+
+        mascotas.slice(0, 4).forEach(m => {
+            const card = `
+                <div class="card shadow-sm" style="min-width: 150px; border: none;">
+                    <div class="card-body text-center p-2">
+                        <h6 class="card-title fw-bold mb-1">${m.nombre}</h6>
+                        <span class="badge bg-success">${m.raza}</span>
+                        <p class="small text-muted mt-1">Visitas: ${m.visitas}</p>
+                    </div>
+                </div>
+            `;
+            contenedor.innerHTML += card;
+        });
+    } catch (e) {
+        console.error("Error cargando ranking");
+    }
+}
+    </script>
+</body>
+</html>
