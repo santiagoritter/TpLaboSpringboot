@@ -122,7 +122,6 @@ public class VeterinariaService {
         return mascotaRepo.findTop10ByOrderByVisitasDesc();
     }
 
-    // h. Invitar personas
     public Invitacion crearInvitacion(int idInvitante, String email) {
         Invitacion inv = new Invitacion();
         inv.setIdInvitante(idInvitante);
